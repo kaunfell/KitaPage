@@ -89,16 +89,20 @@ nav {
     border-bottom: 1px solid #dbccce;
     margin-top: 2.42vh;
     font-size: 29px;
-    width: 564px;
+    width: 607px;
+    
+    
     
     
     text-align: center;
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 nav li {
     display: inline;
-    
+    flex-grow: 1;
+    text-align: center;
     
     
     
@@ -106,11 +110,20 @@ nav li {
 
 nav li a {
     color: #dbccce;
-    
+    text-decoration: none;
+   
 }
 
 
+nav li::before {
+    content: '•';
+    margin-right: 10px;
+    color: #dbccce;
+}
 
+nav li:first-child::before {
+    content: '';
+}
 
 
 
@@ -120,27 +133,45 @@ nav li a {
     margin-top: 6vh;
     height: 50vh;
     padding: 0%;
-    border: 2px solid rgb(190, 241, 50);
     position: relative;
+    display: flex;
+    flex-direction: column;
 
-    border: 2px solid purple;
+    
     
 }
 
-.headerContainer {
-height: 48px;
-margin-bottom: 0%;
-margin-top: 0%;
+newsHeaderContainer {
+    height: 30px;
+    margin: 0%;
+    padding: 0%;
+    
+
+    position: relative;
+    background-color: #ffffff;
+
+    border: 2px solid red;
 }
  
 
 
-.headerContainer h6{
+.newsPost h6{
     position: absolute;
-    top: 0%;
+    top: 10px;
+    left: 0%;
+    
+    margin: 0%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #bbbbbb;
+    font-size: 14.49px;
+    
 }
 
-.headerContainer h4{
+.year {
+    display: block;
+}
+
+.newsSection h4{
     font-size: 24.84px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #ffffff;
@@ -154,7 +185,7 @@ margin-top: 0%;
     background-size: cover;
     background-repeat: no-repeat;
 
-    top:0%;
+    top: 0%;
     right: 0%;
     z-index: 1;
     position: absolute;
@@ -168,8 +199,8 @@ margin-top: 0%;
     width: 40vw;
     text-align: left;
     margin-top: 0%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 9.98%;
+    padding-right: 9.98%;
     padding-bottom: 52px;
     
     
@@ -179,20 +210,33 @@ margin-top: 0%;
     background-color: #ffffff;
     opacity: .77;
 
+    
 
-    border: 2px solid white;
+}
+
+.newsContainer p {
+    margin: 0%;
+    padding: 0%;
+
 }
 
 .newsContainer h3 {
     text-align: left;
     text-decoration: underline;
+    margin-left: 0%;
 }
 
+.newsPost {
+    margin-top: 48px;
+    padding: 0%;
+    margin-bottom: 0%;
 
+}
 
 .tree {
     width: 100%;
-    height: 40%;
+    flex-grow: 1;
+    
     
     background-image: url("../img/img_footer_tree.png");
     background-repeat: no-repeat;
@@ -201,5 +245,5 @@ margin-top: 0%;
 
     margin-top: 10px;
 
-    border: 2px solid green;
+
 }
