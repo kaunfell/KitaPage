@@ -3,7 +3,7 @@ body, html{
     background-image: url("../img/img_BG.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    
 
     
     
@@ -18,6 +18,7 @@ body, html{
 
 .vineUp {
     background-image: url("../img/img_leaves_top.png");
+    background-repeat: no-repeat;
     position: absolute;
     width: 392px;
     height: 497px;
@@ -29,6 +30,7 @@ body, html{
 
 .vineDown {
     background-image: url("../img/img_leaves_bot.png");
+    background-repeat: no-repeat;
     position: absolute;
     width: 362px;
     height: 473px;
@@ -36,6 +38,76 @@ body, html{
     right: 0%; 
 }
 
+/*Language*/
+.language{
+    position: absolute;
+    top: 11.18%;
+    left:12.56%;
+    width: 109px;
+    height: 100px;
+    
+
+
+   
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14.49px;
+    color: #b2b2b2;
+    
+    margin: 0%;
+    padding: 0%;
+    justify-content: space-between;
+    display: flex;
+
+
+}
+.language p{
+    margin-right: 9px;
+    
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.langCurrent{
+    width: 58px;
+    height: 39px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid #b2b2b2;
+    
+    padding: 0%;
+
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 0%;
+    bottom: 0px;
+    
+}
+.language:hover .dropdown {
+    display: flex;
+
+}
+
+.langOpt{
+    width: 58px;
+    height: 39px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid #b2b2b2;
+    margin-top: 5px;
+    
+
+    
+
+}
+
+/*Header*/
 header {
     margin-top: 12.7vh;
     margin-bottom: 0%;
@@ -83,46 +155,82 @@ header h1, h2, h3 {
 }
 
 
-
+/*Nav*/
 nav {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-bottom: 1px solid #dbccce;
-    margin-top: 2.42vh;
+    border-bottom: 1px solid #dfdedd;
+    margin-top: 3.4vh;
     font-size: 29px;
     width: 607px;
     
     
+    justify-content: center;
+    align-items: center;
     
     
-    text-align: center;
+    
     display: flex;
     justify-content: space-between;
+
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+
+    width: 100%;
+    padding: 0%;
+    margin: 0% 0% 34px 0%;
+    
+    
 }
 
 nav li {
-    display: inline;
-    flex-grow: 1;
-    text-align: center;
+    list-style-type: none;
     
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+
     
     
 }
 
 nav li a {
-    color: #dbccce;
+    color: #dfdedd;
     text-decoration: none;
-   
+    
+    
 }
 
 
 nav li::before {
-    content: '•';
+    content: url('../img/dots2.png');
+
+    color: #dfdedd;
+    
+
     margin-right: 10px;
-    color: #dbccce;
+
+    
+
 }
 
 nav li:first-child::before {
     content: '';
+    z-index: 3;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    
 }
 
 
@@ -131,7 +239,7 @@ nav li:first-child::before {
 
 .newsSection {
     margin-top: 6vh;
-    height: 50vh;
+    height: calc(60vh - 6vh);
     padding: 0%;
     position: relative;
     display: flex;
@@ -150,20 +258,24 @@ newsHeaderContainer {
     position: relative;
     background-color: #ffffff;
 
-    border: 2px solid red;
+    
 }
  
 
 
 .newsPost h6{
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 0%;
     
-    margin: 0%;
+    
+    margin: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #bbbbbb;
+    font-weight: 400;
+    text-align: right;
     font-size: 14.49px;
+    
     
 }
 
@@ -173,6 +285,7 @@ newsHeaderContainer {
 
 .newsSection h4{
     font-size: 24.84px;
+    font-weight: 400;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #ffffff;
     text-align: center;
@@ -236,6 +349,9 @@ newsHeaderContainer {
 .tree {
     width: 100%;
     flex-grow: 1;
+   
+    
+    
     
     
     background-image: url("../img/img_footer_tree.png");
@@ -246,4 +362,10 @@ newsHeaderContainer {
     margin-top: 10px;
 
 
+}
+
+@media (max-height: 1079px) {
+    header {
+        margin-top: 10.7vh;
+    }
 }
