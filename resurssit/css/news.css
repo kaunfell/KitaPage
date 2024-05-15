@@ -125,8 +125,9 @@ header {
     align-items: center;
     justify-content: center;
     
-    
+   
 }
+
 header h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28.98px;
@@ -167,7 +168,7 @@ nav {
 
     font-size: 29px;
     width: 607px;
-    margin-top: calc(12.47vh * 0.334); 
+    margin-top: calc(12.47vh * 0.67); 
     margin-bottom: 1%;
     
     
@@ -180,7 +181,7 @@ nav {
     display: flex;
     justify-content: space-between;
 
-    
+   
 }
 
 nav ul {
