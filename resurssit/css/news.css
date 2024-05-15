@@ -9,7 +9,7 @@ body, html{
     
     margin: 0% 0%;
     width: 100%;
-    
+    height: 100%;
     
     display: flex;
     flex-direction: column;
@@ -130,7 +130,8 @@ header {
 header h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28.98px;
-    color: #dfdedd
+    color: #dfdedd;
+    margin-bottom: 6px;
 }
 
 header h1 {
@@ -166,7 +167,7 @@ nav {
 
     font-size: 29px;
     width: 607px;
-    margin-top: 6%;
+    margin-top: calc(12.47vh * 0.334); 
     margin-bottom: 1%;
     
     
@@ -224,7 +225,7 @@ nav li::before {
 
     color: #dfdedd;
     
-
+    margin-top: 4px;
     margin-right: 10px;
 
     
@@ -248,13 +249,12 @@ nav li.current a{
 
 .newsSection {
     margin-top: 6vh;
-    height: calc(71.5vh - 6vh);
+    height: 100%;
    
     padding: 0%;
     position: relative;
     display: flex;
     flex-direction: column;
-
     
     
 }
@@ -375,11 +375,9 @@ newsHeaderContainer {
 }
 
 @media (max-height: 1079px) {
-    header {
-        margin-top: 9.7vh;
-    }
+
     .newsSection {
-        height: calc(49.5vh - 6vh);
+       /* height: calc(51vh - 6vh);*/
     }
     .language {
         top: 17.18%;
