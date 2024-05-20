@@ -45,7 +45,7 @@ body, html{
 .language{
     position: absolute;
     top: 11.18%;
-    left: 6.56%;
+    left: 5.8%;
     width: 109px;
     height: 105px;
     
@@ -132,7 +132,7 @@ header h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 28.98px;
     color: #dfdedd;
-    margin-bottom: 6px;
+    margin-bottom: 9px;
 }
 
 header h1 {
@@ -147,9 +147,13 @@ header h1 {
 }
 
 header h2 {
-    font-size: 33.12px;
+    /*font-size: 33.12px;
     font-family: kozuka-gothic-pr6n, sans-serif;
-    color: #bbbbbb;
+    color: #bbbbbb;*/
+
+   content: url('../img/img_kanji.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     
 }
 
@@ -168,7 +172,10 @@ nav {
 
     font-size: 29px;
     width: 607px;
-    margin-top: calc(12.47vh * 0.67); 
+    margin-top: calc(12.47vh * 0.67);
+    
+    
+     
     margin-bottom: 1%;
     
     
@@ -249,7 +256,8 @@ nav li.current a{
 /*Unique*/
 
 .newsSection {
-    margin-top: 6vh;
+    margin-top: 3.9vh; /* ennen 6vh*/
+    
     height: 100%;
    
     padding: 0%;
@@ -276,7 +284,7 @@ newsHeaderContainer {
 
 .newsPost h6{
     position: absolute;
-    top: 5px;
+    top: 15px;
     left: 0%;
     
     
@@ -309,7 +317,7 @@ newsHeaderContainer {
     background-size: cover;
     background-repeat: no-repeat;
 
-    top: 0%;
+    top: -30px;
     right: 0%;
     z-index: 1;
     position: absolute;
@@ -322,7 +330,7 @@ newsHeaderContainer {
     box-sizing: border-box;
     width: 40vw;
     text-align: left;
-    margin-top: 0%;
+    margin-top: 0px; /*ennen 0%*/
     padding-left: 9.98%;
     padding-right: 9.98%;
     padding-bottom: 52px;
@@ -335,7 +343,7 @@ newsHeaderContainer {
     opacity: .77;
 
     
-
+    
 }
 
 .newsContainer p {
@@ -369,7 +377,7 @@ newsHeaderContainer {
     background-size: cover;
     background-position: top;
 
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 0%;
     padding-bottom: 0%;
 
@@ -377,12 +385,22 @@ newsHeaderContainer {
 
 @media (max-height: 1079px) {
 
-    .newsSection {
-       /* height: calc(51vh - 6vh);*/
-    }
+
     .language {
         top: 17.18%;
+        left: 6.56%
     }
 }
 
 
+@media screen and (max-width: 1920px) {
+    nav{
+        font-size: 29px; /*give smaller?*/
+    }
+    .newsContainer{
+        font-size: 18.63px; /*give smaller?*/
+    }
+    .newsSection {
+        margin-top: 6vh;
+    }
+}
