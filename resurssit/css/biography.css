@@ -15,3 +15,393 @@ body, html{
     flex-direction: column;
     align-items: center;
 }
+
+.vineUp {
+    background-image: url("../img/img_leaves_top.png");
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 392px;
+    height: 497px;
+    top:0%;
+    left: 0%;
+
+    
+}
+
+.vineDown {
+    background-image: url("../img/img_leaves_bot.png");
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 362px;
+    height: 473px;
+    bottom: 0px;
+    right: 0%; 
+    margin-bottom: 0;
+    align-self: flex-end;
+    
+}
+
+/*Language*/
+.language{
+    position: absolute;
+    top: 11.18%;
+    left: 5.8%;
+    width: 109px;
+    height: 105px;
+    
+    
+
+
+   
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14.49px;
+    color: #b2b2b2;
+    
+    margin: 0%;
+    padding: 0%;
+    justify-content: space-between;
+    display: flex;
+
+
+}
+.language p{
+    margin-right: 9px;
+    
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.langCurrent{
+    width: 58px;
+    height: 39px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid #b2b2b2;
+    
+    padding: 0%;
+    margin-top: 5px;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    right: 0%;
+    bottom: 0px;
+    
+}
+.language:hover .dropdown {
+    display: flex;
+
+}
+
+.langOpt{
+    width: 58px;
+    height: 39px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 4px solid #b2b2b2;
+    margin-top: 5px;
+    
+
+    
+
+}
+
+/*Header*/
+header {
+    margin-top: 12.7vh;
+    margin-bottom: 0%;
+    width: 252px;
+    height: 165px;
+    
+    
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+
+header h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28.98px;
+    color: #dfdedd;
+    margin-bottom: 9px;
+}
+
+header h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 37.26px;
+    text-align: center;
+
+
+    color: #bbbbbb;
+    
+    
+}
+
+header h2 {
+    /*font-size: 33.12px;
+    font-family: kozuka-gothic-pr6n, sans-serif;
+    color: #bbbbbb;*/
+
+   content: url('../img/img_kanji.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+header h1, h2, h3 {
+    
+    padding: 0%;
+    margin: 1.7%;
+    font-weight: 400;
+}
+
+
+/*Nav*/
+nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid #dfdedd;
+
+    font-size: 29px;
+    width: 607px;
+    margin-top: calc(12.47vh * 0.67);
+    
+    
+     
+    margin-bottom: 1%;
+    
+    
+    
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    display: flex;
+    justify-content: space-between;
+
+   
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+    
+
+    width: 100%;
+    padding: 0%;
+    margin: 0% 0% 34px 0%;
+    
+    
+}
+
+nav li {
+    list-style-type: none;
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+
+    
+    
+}
+
+nav li a {
+    color: #dfdedd;
+    text-decoration: none;
+    
+    
+}
+
+
+nav li::before {
+    content: url('../img/dots2.png');
+
+    color: #dfdedd;
+    
+    margin-top: 4px;
+    margin-right: 10px;
+
+    
+
+}
+
+nav li:first-child::before {
+    content: '';
+    z-index: 3;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    
+}
+nav li.current a{
+    color: #cbcbcb;
+}
+nav li:hover a{
+    color: #cbcbcb;
+}
+
+
+/*Unique*/
+
+.bioSection {
+    margin-top: 3.9vh; /* ennen 6vh*/
+    
+    height: 100%;
+   
+    padding: 0%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.bioSection h4{
+    font-size: 24.84px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    text-align: center;
+    width: 122px;
+    height: 30px;
+    padding: 0%;
+
+
+    background-image: url("../img/img_section_contact.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    top: -30px;
+    right: 0%;
+    z-index: 1;
+    position: absolute;
+    margin: 0%;
+}
+
+.bioContainer{
+    width: 40vw;
+    background-color: #ffffff;
+    opacity: .77;
+    
+    
+    padding-left: 33px;
+    padding-right: 33px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #a19e9f;
+
+    border:2px solid green;
+    
+}
+.firstBox {
+    flex: 1;
+    margin: 0 10px; 
+    font-size: 14.49px;
+
+    line-height: 1;
+    border: 2px solid pink;
+    
+}
+
+ .secondBox, .thirdBox {
+    
+    flex: 1;
+    margin: 0 10px; 
+    font-size: 14.49px;
+
+    line-height: 1;
+   border: 2px solid pink;
+}
+
+
+.bioContainer p:not(:first-child) {
+    
+    padding-bottom: 18px;
+
+}
+
+.firstBox {
+   
+
+}
+
+.secondBox{
+    background-image: url("../img/img_bioprofile.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 245px;
+    height: 364px;
+    margin-top: 18px;
+    
+}
+
+.thirdBox p{
+    margin-top: 15vh;
+    
+}
+
+.tree {
+    width: 100%;
+    flex-grow: 1;
+    
+    
+    
+    
+    background-image: url("../img/img_footer_tree.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    margin-top: 10px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+
+}
+
+
+
+
+
+/*Media Queries*/
+@media (max-height: 1079px) {
+    .bioContainer p:not(:first-child) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .language {
+        top: 17.18%;
+        left: 6.56%
+    }
+
+    .bioContainer{
+        
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 1920px) {
+
+    .bioSection {
+        margin-top: 6vh;
+    }
+
+}

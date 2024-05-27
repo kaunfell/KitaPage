@@ -19,7 +19,7 @@ body, html{
 .vineUp {
     background-image: url("../img/img_leaves_top.png");
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
     width: 392px;
     height: 497px;
     top:0%;
@@ -31,7 +31,7 @@ body, html{
 .vineDown {
     background-image: url("../img/img_leaves_bot.png");
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
     width: 362px;
     height: 473px;
     bottom: 0px;
@@ -251,7 +251,9 @@ nav li:first-child::before {
 nav li.current a{
     color: #cbcbcb;
 }
-
+nav li:hover a{
+    color: #cbcbcb;
+}
 
 /*Unique*/
 
@@ -284,14 +286,14 @@ newsHeaderContainer {
 
 .newsPost h6{
     position: absolute;
-    top: 15px;
-    left: 0%;
+    top: 17px;
+    left: 3px;
     
     
     margin: 5px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #bbbbbb;
-    font-weight: 400;
+    font-weight: 600;
     text-align: right;
     font-size: 14.49px;
     
@@ -383,6 +385,8 @@ newsHeaderContainer {
 
 }
 
+
+/*Media Queries*/
 @media (max-height: 1079px) {
 
 
@@ -398,7 +402,7 @@ newsHeaderContainer {
         font-size: 29px; /*give smaller?*/
     }
     .newsContainer{
-        font-size: 18.63px; /*give smaller?*/
+        font-size: 18px; /*give smaller?*/
     }
     .newsSection {
         margin-top: 6vh;
