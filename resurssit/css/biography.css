@@ -2,9 +2,13 @@ body, html{
     background-color: rgb(247, 234, 234);
     background-image: url("../img/img_BG.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    background-attachment: fixed;
+    font-size: 16px;
     
     position: relative;
+    
+    
     
     
     margin: 0% 0%;
@@ -43,7 +47,7 @@ body, html{
 
 /*Language*/
 .language{
-    position: absolute;
+    position: fixed;
     top: 11.18%;
     left: 5.8%;
     width: 109px;
@@ -188,7 +192,8 @@ nav {
     display: flex;
     justify-content: space-between;
 
-   
+    background-color: #ffffff;
+    opacity: .77;
 }
 
 nav ul {
@@ -262,7 +267,7 @@ nav li:hover a{
     margin-top: 3.9vh; /* ennen 6vh*/
     
     height: 100%;
-   
+    min-height: 69vh;
     padding: 0%;
     position: relative;
     display: flex;
@@ -307,7 +312,7 @@ nav li:hover a{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #a19e9f;
 
-    border:2px solid green;
+    
     
 }
 .firstBox {
@@ -315,19 +320,30 @@ nav li:hover a{
     margin: 0 10px; 
     font-size: 14.49px;
 
-    line-height: 1;
-    border: 2px solid pink;
+    line-height: 1.5;
+    
     
 }
-
- .secondBox, .thirdBox {
+.secondBox{
+    background-image: url("../img/img_bioprofile.png");
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    
+    width: 245px;
+    height: 364px;
+    margin-top: 18px;
+    margin: 0 10px; 
+    flex: 1;
+}
+ .thirdBox {
     
     flex: 1;
     margin: 0 10px; 
     font-size: 14.49px;
 
-    line-height: 1;
-   border: 2px solid pink;
+    line-height: 1.5;
+   
 }
 
 
@@ -337,30 +353,19 @@ nav li:hover a{
 
 }
 
-.firstBox {
-   
 
-}
 
-.secondBox{
-    background-image: url("../img/img_bioprofile.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 245px;
-    height: 364px;
-    margin-top: 18px;
-    
-}
+
 
 .thirdBox p{
-    margin-top: 15vh;
+    margin-top: 11vh;
     
 }
 
 .tree {
     width: 100%;
     flex-grow: 1;
-    
+    min-height: 180px;
     
     
     
@@ -380,7 +385,7 @@ nav li:hover a{
 
 
 /*Media Queries*/
-@media (max-height: 1079px) {
+@media (max-height: 1080px) {
     .bioContainer p:not(:first-child) {
         padding-top: 0px;
         padding-bottom: 0px;
@@ -391,9 +396,11 @@ nav li:hover a{
         left: 6.56%
     }
 
-    .bioContainer{
-        
-        margin: auto;
+
+
+
+    .thirdBox p{
+        margin-top: 17vh;
     }
 }
 
@@ -404,4 +411,7 @@ nav li:hover a{
         margin-top: 6vh;
     }
 
+    .bioContainer {
+        
+    }
 }
