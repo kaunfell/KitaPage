@@ -668,7 +668,7 @@ form button:focus {
 
 
 /*THE*/
-@media only screen and (max-height: 1079px) {
+@media only screen and (max-height: 1080px) { /*had 1079 before, do i even need this?*/
     body, html {
         
         overflow-y: auto;
