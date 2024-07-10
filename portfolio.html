@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./resurssit/css/portfolio.css" rel="stylesheet">
+        
     </head>
     <body>
 
@@ -29,6 +30,7 @@
         <h1>REI KITAKAZE</h1>
         <h2>北風伶</h2>   
     </header>
+    
 
 
     <nav>
@@ -52,40 +54,32 @@
         <div class="first">
             <div class="player">
                 <div class="textContainer">
-                <p class="nowPlayingText">Now playing:</p>
-                <p class="songName">Song name here</p>
+                    <p class="nowPlayingText">Now playing:</p>
+                    <div class=songElements>
+                    <p  class="TheYear" class="songName">sss</p>
+                    <p  class="TheAlbum" class="songName">sss</p> <!--2024: License Album: Realms-->
+                    </div>
                 </div>
                 <audio controls class="audioPlayer">
-                    <source src="path_to_your_audio_file.mp3" type="audio/mpeg">
+                    <source   src="" type="audio/wav">
                     Your browser does not support the audio element.
                 </audio>
                 
             </div>
-            <div class="songExpContainer">
+             <div class="songExpContainer">
                 <div class="upperSongExp">
-                <p class="otherSongName">Super hieno kappale</p>
-                <p class="adjectives">eeppinen - jekku - jännä</p>
-                <img src="./resurssit/img/img_title_about.png" alt="about title">
+                    <p class="TheSong otherSongName"></p>
+                    <p class="TheAdjective adjectives"></p>
+                    <img src="./resurssit/img/img_title_about.png" alt="about title">
                 </div>
-                <p class="songExp">
-            Generated Lorem Ipsum
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-
-             Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. 
-             Integer feugiat scelerisque varius morbi enim. Mus mauris vitae ultricies leo integer
-              malesuada. Habitasse platea dictumst quisque sagittis purus sit. Aliquet eget sit amet tellus cras adipiscing enim. 
+             <p class="songExp">
+             
               </p>
             </div>
             <div class="songsContainer">
-                <p class="otherSongName">"Faaaar belouwww"</p>
-                <p class="adjectives">eeppinen - jekku - jännä</p>
-                <p class="otherSongName">Ambussshh the madd</p>
-                <p class="adjectives">eeppinen - jekku - jännä</p>
-                <p class="otherSongName">Humnlee themee juttu</p>
-                <p class="adjectives">eeppinen - jekku - jännä</p>
-                <p class="otherSongName">the desert bastion</p>
-                <p class="adjectives">eeppinen - jekku - jännä</p>
+                <!--p class="otherSongName"></p>
+                <p class="adjectives"></p-->
+
 
 
 
@@ -101,7 +95,8 @@
             <img class="rightArrow" src="./resurssit/img/img_arrow_R.png" alt="right arrow">
             </div>
             <div class="albumName">
-                <p>2024: License Album: Realms</p>
+                <p  class=TheYear ></p>
+                <p  class=TheAlbum ></p><!--2024: License Album: Realms-->
             </div>
             <div class="albumAbout">
                 <img src="./resurssit/img/img_title_about.png" alt="about title">
@@ -117,9 +112,9 @@
         <div class="third">
             <div class="albumList">
                 <img src="./resurssit/img/img_title_select.png" alt="select title">
-                <h5 class="albumYear">2024</h5>
-                <h5>License Album: Realms</h5>
-                <p>kappeleen nimi</p>
+                <h5 class="TheYear">2024</h5>
+                <h5 class=TheAlbum > --</h5><!--2024: License Album: Realms-->
+                <p class=TheSong>kappeleen nimi</p>
             </div>
         </div>
 
@@ -140,6 +135,6 @@
 
 
 
-    
+    <script src="./resurssit/js/portfolio.js" ></script>
     </body>
 </html>
