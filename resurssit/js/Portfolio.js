@@ -4,7 +4,7 @@
 
 const albums = [
     {
-        year: "2023:",
+        year: "2023: ",
         name: 'Licence Album: Realms',
         songs: [
             {
