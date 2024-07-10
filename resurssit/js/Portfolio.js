@@ -23,7 +23,7 @@ const albums = [
                 explanation: "extra super cool . Mus mauris vitae ultricies leo integer malesuada. Habitasse platea dictumst quisque sagittis purus sit. Aliquet eget sit amet tellus cras adipiscing enim. "
 
             },
-            {
+            { 
                 name: 'mecha3',
                 source: "./resurssit/music/mecha3.wav",
                 adjectives: ['adj1', 'adj2', 'adj3'],
