@@ -275,7 +275,7 @@ nav li:hover a{
     flex-direction: column;
     align-items: center;
     
-
+    
 }
 
 
@@ -332,6 +332,7 @@ nav li:hover a{
 
 
     margin: 0%;
+    margin-left: 52px;
     padding: 0%;
 
     width: 100%;
@@ -385,6 +386,8 @@ nav li:hover a{
 .songElements{
     display: flex;
     flex-direction: row;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 5%;
 }
 
 .audioPlayer {
@@ -402,6 +405,7 @@ nav li:hover a{
     
     width: 90%;
     max-width: 559px;
+    min-height: 250px;
 
     margin-top: 8px;
     
@@ -413,41 +417,49 @@ nav li:hover a{
 
 .upperSongExp {
     position: relative;
+    border: 1px solid #d7d7d7;
+
 }
 .otherSongName {
     font-family: Arial, Helvetica, sans-serif;
-    color: #979797;
+    color: #b7b7b7;
+    
 
     font-size:  16.4px;
     
     margin-bottom: 0px;
+    
     margin-top: 15px;
     font-weight: 550;
+
+    
 
 }
  .adjectives {
     font-family: Arial, Helvetica, sans-serif;
     color: #b1b1b1;
     font-size:  14.35px;
-    margin-top: 13px;
+    /*margin-top: 13px;*/
     padding-bottom: 15px;
+  
     
     
-}
-
-.adjectives{
-
     margin-bottom: 0%;
+    margin-top: 4px;
 }
-.adjectives:not(:last-child){
+
+
+/*.adjectives:not(:last-child){
     border-bottom: 1px solid #d2d2d2;
-}
+}*/
 .songExp {
-    
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 25px;
     padding-left: 31px;
     padding-right: 31px;
     text-align: left;
+    
+    
 }
 .songExpContainer img {
     position: absolute;
@@ -459,23 +471,36 @@ nav li:hover a{
 }
 
 .songsContainer {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    
     text-align: center;
 
     width: 90%;
     max-width: 559px;
 
     margin-top: 16px;
-    border: 1px solid #d7d7d7;
+    
+    
     display: flex;
     flex-direction: column;
- 
+
+    
+    
     
 }
 
+.popOutDiv{
+    
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7;
+    
+    margin-bottom: 1px;
+    
+}
 
-
-
+.move {
+    transform: translate(-100px);
+  }
 
 
 /*Second and second items*/
@@ -539,9 +564,10 @@ nav li:hover a{
     
     margin-top: 20px;
     background-color: #ffffff;
+    
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18.63px;
-    width: 490px;
+    min-width: 490px;
     height: 52px;
     text-align: center;
     justify-content: center;
@@ -555,10 +581,14 @@ nav li:hover a{
     margin-top: 16px;
     background-color: #ffffff;
     width: 490px;
-    padding: 0%;
-    text-align: center;
+    min-height: 150px;
+    max-width: 490px;
+    
+    text-align:left;
 
     border: 1px solid #d2d2d2;
+
+    
 }
 .albumAbout img {
     position: absolute;
@@ -568,12 +598,14 @@ nav li:hover a{
     margin: auto;
     
     
+    
 }
 
-.albumAbout p {
+.albumAboutP {
     font-family: Arial, Helvetica, sans-serif;
     font-size:  14.49px;
-    color: #b1b1b1;
+    
+    
     text-align: left;
 
     padding-left: 21px;
@@ -617,6 +649,7 @@ nav li:hover a{
     background-color: #ffffff;
     text-align: center; 
     width: 386px;
+    height: 140px;
     
     margin-left: 25px; 
     /*player has extra 30px, so lets add here as well*/
@@ -657,22 +690,25 @@ nav li:hover a{
     font-size: 18.63px;
     color: #bababa;
     margin-top: 16px;
+    
     margin-bottom: 0px;
     padding-bottom: 0%;
+
 
     
 }
 .albumList p {
-    margin-bottom: 0%;
-    margin-top: 16px;
-    padding-top: 0%;
-    padding-bottom: 52px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18.63px;
     color: #b7b7b7;
+
+    margin-bottom: 0%;
+    margin-top: 16px;
+    padding-top: 0%;
+    
+
     
 }
-
 
 
 .tree {
@@ -687,7 +723,8 @@ nav li:hover a{
     background-size: cover;
     background-position: top;
 
-    margin-top: 10px;
+   /* margin-top: 10px;*/
+    margin-top: 40px;
     margin-bottom: 0%;
     padding-bottom: 0%;
 

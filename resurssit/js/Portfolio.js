@@ -1,11 +1,18 @@
 // class TheAlbum is in 3 places
-//classTheSong is in 2 places
+//classTheSong is in 1 places
 
 
-const albums = [
-    {
-        year: "2023: ",
+const albums = {
+    year:{
+        "2024": [
+
+        {
+        id: "realms",
         name: 'Licence Album: Realms',
+        explanation: "Cool album. Mus mauris vitae ultricies leo integer malesuada. \
+                Habitasse platea dictumst quisque sagittis purus sit. Aliquet eget sit amet tellus cras adipiscing enim.\
+                Habitasse platea dictumst quisque sagittis purus sit. Aliquet eget sit amet tellus cras adipiscing enim. \
+                Habitasse platea dictumst quisque sagittis purus sit. Aliquet eget sit amet tellus cras adipiscing enim.  ",
         songs: [
             {
                 name: 'mecha1',
@@ -45,13 +52,27 @@ const albums = [
             },
 
         ]//songs end here
-    }
-    //other album here
+    },//other album here
+    {
+        id: "oracle",
+        name: "Oracle Theme",
+        explanation: "veery cool album! veery cool album! veery cool album! veery cool album!",
+        songs: [
+              {  name:"Orrracle song/mecha7",
+                 source: "./resurssit/music/mecha7.wav",
+                 explanation: "This song is used on oraclewwwww",
+                 adjectives: ['asfsdj1', 'adjektiiive2', 'adj3'],
+              }
+        ]
+    }   
 
-
-
-
-];
+    ], //albums24 end here?
+    //2025: [] here
+}
+};
+document.addEventListener('DOMContentLoaded', function(){
+    ChangeSongNames(defaultAlbum.songs)
+});
 
 //defining some areas where we change strings
 const albumTitles = document.querySelectorAll('.TheAlbum');
@@ -60,43 +81,126 @@ const albumYears = document.querySelectorAll('.TheYear');
 const songsContainer = document.querySelector('.songsContainer');
 
 
-
-
-//Loops through year
-albumYears.forEach(albumYear => {
-
-    albumYear.innerHTML = albums[0].year + "&nbsp;" ;
-
-});
-//Loops through names
-albumTitles.forEach(albumTitle => {
-
-    albumTitle.innerHTML = albums[0].name;
-
-});
-
-
 //Access songs in album 0
-const songs = albums[0].songs;
+//const songs = albums.albums24[0].songs;
 
 //getting access to elements
 const TheSongs = document.querySelectorAll('.TheSong');
 const TheAdjective = document.querySelector('.TheAdjective');
 const songExp = document.querySelector('.songExp');
+const albumAbout = document.querySelector(".albumAboutP");
+
+const popOutDiv = document.querySelector(".popOutDiv");
+
+//const songs = albums.albums24[0].songs;
+
+
 
 //access to audioplayer
 const audioPlayer = document.querySelector('.audioPlayer');
 
-//default is the first song
-TheSongs[0].textContent = songs[0].name;
-TheAdjective.textContent = songs[0].adjectives;
-songExp.textContent = songs[0].explanation;
-audioPlayer.src = songs[0].source;
+//DEFAULT is the first song
+const defaultAlbum = albums.year["2024"][0]; // Default to first album
+const defaultSong = defaultAlbum.songs[0]; 
+
+TheSongs[0].textContent = defaultSong.name;
+TheAdjective.textContent = defaultSong.adjectives; 
+
+songExp.textContent = defaultSong.explanation;
+audioPlayer.src = defaultSong.source;
+
+albumAbout.textContent = defaultAlbum.explanation;
+
+
+//albumYears.textContent = albums.year;
+albumTitles.forEach(albumTitle => {
+    albumTitle.innerHTML = defaultAlbum.name; // 
+});
+
+
+//         FUNCTIONS >>
+
+//choose and change ALBUM 
+const TheAlbumName = document.querySelectorAll(".TheAlbumName");
+
+TheAlbumName.forEach(alb => {
+    alb.addEventListener('click', chooseAlbum);
+
+});  
+    
+let previouslyClickedAlbum = null;
+
+    function chooseAlbum(event){
+        const alb = event.currentTarget;
+
+        if(previouslyClickedAlbum){
+            previouslyClickedAlbum.style.fontWeight = "normal";
+        }
+        alb.style.fontWeight = "bold";
+        previouslyClickedAlbum = alb;
+        //changeAlbumNames(alb.textContent);
+        
+        const albumId = alb.getAttribute('data-album-id');
+        
+        const selectedAlbum = albums.year["2024"].find(album => album.id === albumId);
+        
+
+        if(selectedAlbum){
+            changeAlbumNames(selectedAlbum);
+       };
+
+    };
+ 
+
+//Loops through names
+function changeAlbumNames(selectedAlbum){
+
+   // albumTitles.forEach(albumTitle => {
+     //   albumTitle.innerHTML = ""; // ""Clear the content
+   // });
+
+    albumTitles.forEach(albumTitle => {
+    
+        
+        //albumTitle.innerHTML = albums.albums24[0].name;
+        albumTitle.innerHTML = selectedAlbum.name;
+    });
+        albumAbout.innerHTML = selectedAlbum.explanation;
+
+    ChangeSongNames(selectedAlbum.songs);
+};
+    
+
+//Loops through year
+albumYears.forEach(albumYear => {
+
+    const year = albumYear.dataset.year;
+    albumYear.innerHTML = year + ":" + "&nbsp;" ;
+
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 // Loop through each songTitle element and update its innerHTML
+function ChangeSongNames(songs){
+
+    songsContainer.innerHTML = "";
+
 songs.forEach(song => {
+
+    const popOutDiv = document.createElement("div");
+    popOutDiv.classList.add("popOutDiv");
 
     //const songTitle = document.querySelector('.otherSongName').cloneNode(true);
     const songTitle = document.createElement("p");
@@ -107,26 +211,35 @@ songs.forEach(song => {
     //const songAdjective = document.querySelector('.adjectives').cloneNode(true);
     const songAdjective = document.createElement("p");
     songAdjective.classList.add('adjectives');
-    songAdjective.textContent = song.adjectives;
-    // Check if there is a corresponding song in albums[0].songs
-   /* if (index < songs.length) {
-        songTitle.innerHTML = songs[index].name;
+    songAdjective.textContent = song.adjectives.join(' - ');
+
         
-    }*/
-    songsContainer.appendChild(songTitle );
-    songsContainer.appendChild(songAdjective );
+        songsContainer.appendChild(popOutDiv);    
+   /*was songsContainer*/
+    popOutDiv.appendChild(songTitle );
+    popOutDiv.appendChild(songAdjective );
+   
+    
 
-//songtitles have eventlistener
-    songTitle.addEventListener('click', showSongDetails);
+//songtitles/popOutDiv have eventlistener
+    popOutDiv.addEventListener('click',()=> showSongDetails(song));
+    
+});
 
+if (songs.length > 0) {
+    showSongDetails(songs[0]);
+}
 
-    function showSongDetails(){
+};
 
+//function to show details
+    function showSongDetails(song){
+        
         TheSongs.forEach(TheSong =>{
             TheSong.textContent = song.name;
         });
         //gives the adjectives and explanation of current song
-        TheAdjective.textContent = song.adjectives;
+        TheAdjective.textContent = song.adjectives.join(' - ');
         songExp.innerHTML = song.explanation;
 
 
@@ -137,58 +250,22 @@ songs.forEach(song => {
 
     }
 
+    let previouslyClickedDiv = null;
     function popOut(){
+        const popOutDiv = event.currentTarget;
+
+        if(popOutDiv.closest('.songsContainer')){
+
+        
+        if(previouslyClickedDiv){
+            previouslyClickedDiv.style.transform = "translate(0px)";
+        }
+        
+        popOutDiv.style.transform = "translate(-50px)";
+        previouslyClickedDiv = popOutDiv;
 
     }
-
-});
-
+};
 
 
 
-
-/*
-for(let i= 0; i<albums[0].songs.length; i++){
-
-    songTitles.forEach(songTitle => {
-
-        songTitle.innerHTML = albums[0].songs[i].name;
-    
-    });
-}*/
- /*   songTitles.forEach(songTitle => {
-
-        for(let i= 0; i<albums[0].songs.length; i++){
-
-        songTitle.innerHTML = albums[0].songs[i].name;
-    }
-
-    });*/
-
-
-
-
-
-
-/*
-function showSongName(){
-
-    TheSongs.forEach(TheSong =>{
-        TheSong.textContent = songTitle;
-    });
-}
-*/
-
-/*    TheSong.innerHTML = "teeest";
-    TheSongs.forEach(TheSong => {
-
-        TheSong.textContent = "teeeeest";
-    
-    });*/
-
-
-
-
-    /*    TheSongs.forEach(TheSong =>{
-        TheSong.style.backgroundColor = "pink";
-    });*/
