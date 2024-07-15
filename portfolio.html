@@ -56,7 +56,7 @@
                 <div class="textContainer">
                     <p class="nowPlayingText">Now playing:</p>
                     <div class=songElements>
-                    <p  class="TheYear" class="songName">sss</p>
+                    <p  class="TheYear" class="songName" data-year="2024">sss</p>
                     <p  class="TheAlbum" class="songName">sss</p> <!--2024: License Album: Realms-->
                     </div>
                 </div>
@@ -77,9 +77,10 @@
               </p>
             </div>
             <div class="songsContainer">
-                <!--p class="otherSongName"></p>
-                <p class="adjectives"></p-->
-
+                <!--div class="popOutDiv">
+                <p class="otherSongName"></p>
+                <p class="adjectives"></p>
+                </div-->
 
 
 
@@ -95,26 +96,21 @@
             <img class="rightArrow" src="./resurssit/img/img_arrow_R.png" alt="right arrow">
             </div>
             <div class="albumName">
-                <p  class=TheYear ></p>
+                <p  class=TheYear data-year="2024"></p>
                 <p  class=TheAlbum ></p><!--2024: License Album: Realms-->
             </div>
             <div class="albumAbout">
-                <img src="./resurssit/img/img_title_about.png" alt="about title">
-                <p>Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. 
-             Integer feugiat scelerisque varius morbi enim. Mus mauris vitae ultricies leo integer <br> 
-                <br>
-             Interdum consectetur libero id faucibus nisl tincidunt eget nullam non. 
-             Integer feugiat scelerisque varius morbi enim. Mus mauris vitae ultricies leo integer
-              malesuada. Habitasse platea dictumst quisque sagittis purus sit. Aliquet eget sit amet tellus cras adipiscing enim.</p>
+                <img  src="./resurssit/img/img_title_about.png" alt="about title">
+                <p class="albumAboutP">--</p>
             </div>
         </div>
         
         <div class="third">
             <div class="albumList">
                 <img src="./resurssit/img/img_title_select.png" alt="select title">
-                <h5 class="TheYear">2024</h5>
-                <h5 class=TheAlbum > --</h5><!--2024: License Album: Realms-->
-                <p class=TheSong>kappeleen nimi</p>
+                <h5 class="albumYear" data-year="2024">2024</h5>
+                <p class="TheAlbumName" data-album-id="realms">Licence Album: Realms</p><!--class=TheAlbum  2024: License Album: Realms-->
+                <p class="TheAlbumName" data-album-id="oracle">Oracle Theme</p> <!-- class=TheSong -->
             </div>
         </div>
 
